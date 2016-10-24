@@ -333,7 +333,8 @@ public abstract class BaseRecycleViewAdapter<T> extends RecyclerView.Adapter<Bas
             super(itemView);
             mProgressBar = (ProgressBar) itemView.findViewById(R.id.progressbar);
             mTevLoad = (TextView) itemView.findViewById(R.id.tev_load);
-            mTevLoad.setTextColor(mContext.getResources().getColor(mLoadingTextColor));
+
+
         }
     }
 }

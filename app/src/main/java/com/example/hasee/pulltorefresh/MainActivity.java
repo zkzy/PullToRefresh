@@ -6,7 +6,6 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.library.BaseRecycleViewAdapter;
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleview);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(swipeRefreshLayout);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(gridLayoutManager);
         mainAdapter = new MainAdapter(this, mRecyclerView, mSwipeRefreshLayout);
         mRecyclerView.setAdapter(mainAdapter);
         mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light, android.R.color.holo_red_light, android.R.color.holo_orange_light, android.R.color.holo_green_light);
